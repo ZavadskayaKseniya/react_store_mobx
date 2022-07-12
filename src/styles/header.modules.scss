@@ -1,0 +1,17 @@
+.header {
+  height: 80px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+
+    &_icon {
+      width: 80px;
+      color:red;
+    }
+}
+.icon {
+  width: 80px;
+  color:red;
+}
