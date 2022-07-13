@@ -7,9 +7,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
+import Pills from "../models/Pills";
 import Buttons from "./buttons";
 
-function CardItem({pill}) {
+function CardItem(pill:Pills) {
   return (
     <div className="card-item" >
       <Card sx={{ maxWidth: 250 }}>
