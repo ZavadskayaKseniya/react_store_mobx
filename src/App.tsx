@@ -7,8 +7,8 @@ import {
   Route,
   Routes} from "react-router-dom";
 
-import Header from "./components/header";
-import HomePage from "./pages/home-page";
+import Header from "./components/coommons/header";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (

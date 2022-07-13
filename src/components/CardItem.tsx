@@ -1,4 +1,4 @@
-import '../styles/card-item.modules.scss';
+import '../styles/CardItem.modules.scss';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import Pills from "../models/Pills";
-import Buttons from "./buttons";
+import Buttons from "./coommons/buttons";
 
 function CardItem(pill:Pills) {
   return (

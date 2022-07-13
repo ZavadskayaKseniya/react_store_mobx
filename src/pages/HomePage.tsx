@@ -1,9 +1,9 @@
-import '../styles/home-page.modules.scss';
+import '../styles/HomePage.modules.scss';
 
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import CardItem from "../components/card-item";
+import CardItem from "../components/CardItem";
 import Pills from "../models/Pills";
 
 

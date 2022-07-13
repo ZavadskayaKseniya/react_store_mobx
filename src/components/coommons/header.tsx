@@ -1,4 +1,4 @@
-import '../styles/header.modules.scss';
+import '../../styles/header.modules.scss';
 
 import {AppBar, Toolbar, Typography} from "@mui/material";
 import React from 'react';
