@@ -9,7 +9,7 @@ import CardItem from "../components/card-item";
 const PILLS = [
   {
     id: uuid(),
-    name: "Уголь акт.",
+    name: "Уголь актив.",
     description: "адсорбирующее средство. 250 мг: 10, 20, 30, 50 или 5000 шт.",
     image:"https://f.stolichki.ru/s/drugs/large/14/14587.jpg"
   },

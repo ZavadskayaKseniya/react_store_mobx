@@ -1,10 +1,10 @@
 import {Button} from "@mui/material";
 import React from 'react';
 
-function Buttons() {
+function Buttons({ onClick, children}) {
   return (
     <div className="button">
-      <Button variant="contained">Submit</Button>
+      <Button variant="contained" onClick={onClick} />
     </div>
   );
 }

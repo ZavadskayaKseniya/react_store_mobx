@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className="header">
       <AppBar>
-        <Toolbar sx={{ justifyContent: "space-between", backgroundColor:"rgba(38,38,38,0.96)" }}>
+        <Toolbar sx={{ justifyContent: "space-between", backgroundColor:"rgba(38,38,38,0.95)" }}>
           <Typography>Lekař</Typography>
           <MdAddShoppingCart size={25} className="icon"/>
         </Toolbar>
