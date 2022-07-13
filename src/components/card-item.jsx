@@ -35,5 +35,4 @@ function CardItem({pill}) {
     </div>
   );
 }
-
 export default CardItem;
