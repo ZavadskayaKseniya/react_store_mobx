@@ -1,4 +1,5 @@
-{
+
+const data = {
   "statusCode": 200,
   "isError": false,
   "message": "OK",
@@ -79,4 +80,6 @@
     ],
     "count": 8617
   }
-}
+};
+
+export default data;

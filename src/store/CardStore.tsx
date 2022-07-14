@@ -1,26 +1,24 @@
 import {makeAutoObservable, observable, reaction,runInAction} from "mobx";
 import {v4 as uuidv4} from "uuid";
 
+import data from "../data";
 import Pills from "../models/Pills";
 
 
-const URL = "http://77.223.99.133:8080/api/products/part";
+console.log(data.data.products);
 
 
 class CardStore {
 
-  // public pillsList: Pills[] = [];
+
 
   constructor() {
     makeAutoObservable(this);
-    // reaction(
-    //   () => this.pills,
-    //   (_) => console.log(this.pills.length)
-    // );
+    reaction(
+      () => this.pills,
+      (_) => console.log(this.pills.length)
+    );
   }
-
-
-
 
   // public getPills(): void {
   //   fetch(`${URL}/products/{id}`).then(response => response.json())
@@ -29,8 +27,6 @@ class CardStore {
   //     });
   //
   // }
-
-
 
 
   @observable
