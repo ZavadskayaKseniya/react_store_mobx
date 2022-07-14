@@ -30,7 +30,7 @@ function CardItem(pill:Pills) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Buttons onClick={() => null}>В корзину</Buttons>
+          <Buttons >В корзину</Buttons>
         </CardActions>
       </Card>
     </div>

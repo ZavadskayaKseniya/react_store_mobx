@@ -3,11 +3,11 @@ import React from 'react';
 
 
 
-// @ts-ignore
-function Buttons({ onClick, children}) {
+
+function Buttons(props:any) {
   return (
     <div className="button">
-      <Button variant="contained" onClick={onClick}>В корзину</Button>
+      <Button variant="contained" >В корзину</Button>
     </div>
   );
 }
