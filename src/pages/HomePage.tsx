@@ -16,7 +16,7 @@ const  HomePage = inject('CardStore')(observer((props:any) => {
     <div className="home-page">
       {
 
-        pills.map((pill:InterfacePill) => <CardItem key={pill.id} name={pill.name} id={pill.id} substanceName={pill.substance.name} substanceCode={pill.substance.code} substanceId={pill.substanceId}/>)
+        pills.map((pill:InterfacePill) => <CardItem key={pill.id} pills={pill}/>)
       }
 
     </div>

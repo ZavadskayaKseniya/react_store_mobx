@@ -3,23 +3,23 @@ import '../styles/CardItem.modules.scss';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import Pills from "../models/Pills";
 import Buttons from "./coommon/Buttons";
+import InterfacePill from "../models/interfacePill";
 
 
 
-function CardItem(pills:Pills) {
+function CardItem({pills}:{pills:InterfacePill}) {
   return (
     <div className="card-item" >
       <Card sx={{ maxWidth: 250 }}>
 
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {pills.substanceName}
+            {pills.substance.name}
           </Typography>
           <br/>
           <Typography variant="body2" color="text.secondary">

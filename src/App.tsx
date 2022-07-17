@@ -10,17 +10,22 @@ import {
   Routes} from "react-router-dom";
 
 import Header from "./components/system/Header";
-import HomePage from "./pages/HomePage";
-import CardStore from "./store/CardStore";
-import theme from "./styles/Theme";
 import routes from "./router/routes";
+import theme from "./styles/Theme";
 
+
+enum stores {
+
+  CardStore = "CardStore",
+  AppStore = "AppStore"
+
+}
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Provider CardStore={CardStore}>
+      <Provider {...stores}>
         <Router>
           <div className="App">
             <Header/>
