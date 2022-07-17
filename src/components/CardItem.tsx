@@ -8,25 +8,22 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import Pills from "../models/Pills";
-import Buttons from "./coommons/buttons";
+import Buttons from "./coommon/buttons";
 
-function CardItem(pill:Pills) {
+
+
+function CardItem(pills:Pills) {
   return (
     <div className="card-item" >
       <Card sx={{ maxWidth: 250 }}>
-        <CardMedia
-          sx={{ backgroundSize: "cover",backgroundPosition:"center", backgroundRepeat:"no-repeat" }}
-          component="img"
-          alt="pill img"
-          height="140"
-          image={pill.image}
-        />
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {pill.name}
+            {pills.substanceName}
           </Typography>
+          <br/>
           <Typography variant="body2" color="text.secondary">
-            {pill.description}
+            {pills.name}
           </Typography>
         </CardContent>
         <CardActions>

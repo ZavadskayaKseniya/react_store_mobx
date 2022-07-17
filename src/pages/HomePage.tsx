@@ -2,21 +2,21 @@ import '../styles/HomePage.modules.scss';
 
 import {inject, observer} from "mobx-react";
 import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import CardItem from "../components/CardItem";
+import InterfacePill from "../models/interfacePill";
 import Pills from "../models/Pills";
 import CardStore from "../store/CardStore";
 
 
 
 const  HomePage = inject('CardStore')(observer((props:any) => {
-  const pills:Pills[]=CardStore.pills;
+  const pills:InterfacePill[]=CardStore.pills;
   return (
     <div className="home-page">
       {
-        // eslint-disable-next-line max-len
-        pills.map((pill:Pills) => <CardItem key={pill.id} description={pill.description} name={pill.name} image={pill.image} id={pill.id}/>)
+
+        pills.map((pill:InterfacePill) => <CardItem key={pill.id} name={pill.name} id={pill.id} substanceName={pill.substance.name} substanceCode={pill.substance.code} substanceId={pill.substanceId}/>)
       }
 
     </div>

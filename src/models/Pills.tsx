@@ -1,20 +1,22 @@
-import { v4 as uuidv4 } from 'uuid';
+import InterfacePill from "./interfacePill";
 
 
 export default class Pills {
-  id: string;
+  id: number;
 
   name: string;
 
-  description: string;
+  substanceId: number;
 
-  image: string;
+  substanceName: string;
 
+  substanceCode: string;
 
-  constructor(name:string, image:string, description:string){
-    this.id=uuidv4();
-    this.name=name;
-    this.image=image;
-    this.description=description;
+  constructor(item: InterfacePill) {
+    this.id = item.id;
+    this.name = item.name;
+    this.substanceId = item.substance.id;
+    this.substanceName = item.substance.name;
+    this.substanceCode = item.substance.code;
   }
 }

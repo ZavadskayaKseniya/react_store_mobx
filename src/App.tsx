@@ -1,5 +1,7 @@
 import './styles/App.modules.scss';
 
+
+
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -7,7 +9,7 @@ import {
   Route,
   Routes} from "react-router-dom";
 
-import Header from "./components/coommons/header";
+import Header from "./components/system/header";
 import HomePage from "./pages/HomePage";
 
 function App() {
