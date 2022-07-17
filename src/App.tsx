@@ -8,22 +8,28 @@ import {
   Route,
   Routes} from "react-router-dom";
 
+import {Provider} from "mobx-react";
 import Header from "./components/system/header";
 import HomePage from "./pages/HomePage";
 import theme from "./styles/Theme";
+import CardStore from "./store/CardStore";
+
+
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <div className="App">
-          <Header/>
-          <Routes>
-            <Route  path="/" element={<HomePage/>} />
-            {/* <Route  path="" element={} /> */}
-          </Routes>
-        </div>
-      </Router>
+      <Provider CardStore={CardStore}>
+        <Router>
+          <div className="App">
+            <Header/>
+            <Routes>
+              <Route  path="/" element={<HomePage/>} />
+              {/* <Route  path="" element={} /> */}
+            </Routes>
+          </div>
+        </Router>
+      </Provider>
     </ThemeProvider>
   );
 }
