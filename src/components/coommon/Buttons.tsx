@@ -1,5 +1,6 @@
 import {Button} from "@mui/material";
 import React from 'react';
+import theme from "../../styles/Theme";
 
 
 
@@ -7,7 +8,7 @@ import React from 'react';
 function Buttons(props:any) {
   return (
     <div className="button">
-      <Button variant="contained" >В корзину</Button>
+      <Button variant="contained" color={"error"}   >В корзину</Button>
     </div>
   );
 }

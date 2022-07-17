@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import Pills from "../models/Pills";
-import Buttons from "./coommon/buttons";
+import Buttons from "./coommon/Buttons";
 
 
 
@@ -26,7 +26,7 @@ function CardItem(pills:Pills) {
             {pills.name}
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{ justifyContent: "flex-end"}}>
           <Buttons >В корзину</Buttons>
         </CardActions>
       </Card>

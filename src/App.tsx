@@ -1,6 +1,7 @@
 import './styles/App.modules.scss';
 
 import {ThemeProvider} from "@mui/material";
+import {Provider} from "mobx-react";
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -8,11 +9,11 @@ import {
   Route,
   Routes} from "react-router-dom";
 
-import {Provider} from "mobx-react";
-import Header from "./components/system/header";
+import Header from "./components/system/Header";
 import HomePage from "./pages/HomePage";
-import theme from "./styles/Theme";
 import CardStore from "./store/CardStore";
+import theme from "./styles/Theme";
+import routes from "./router/routes";
 
 
 
@@ -23,10 +24,7 @@ function App() {
         <Router>
           <div className="App">
             <Header/>
-            <Routes>
-              <Route  path="/" element={<HomePage/>} />
-              {/* <Route  path="" element={} /> */}
-            </Routes>
+            {routes}
           </div>
         </Router>
       </Provider>
