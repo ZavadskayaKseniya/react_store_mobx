@@ -10,6 +10,22 @@ const theme = createTheme({
     error: {
       main:"#c00202"},
 
+  },
+  typography: {
+    fontFamily: "Roboto",
+    h1: {
+      fontSize: "1em"
+    },
+    h2: {
+      fontSize: "0.6em"
+    },
+    h3: {
+      fontSize: "0.4em"
+    },
+    fontWeightLight: 400,
+    fontWeightRegular:500,
+    fontWeightMedium:600,
+    fontWeightBold:700
   }
 });
 
