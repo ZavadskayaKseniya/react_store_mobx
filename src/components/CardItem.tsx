@@ -12,7 +12,9 @@ import InterfacePill from "../models/interfacePill";
 
 
 
+
 function CardItem({pills}:{pills:InterfacePill}) {
+
   return (
     <div className="card-item" >
       <Card sx={{ maxWidth: 250 }}>

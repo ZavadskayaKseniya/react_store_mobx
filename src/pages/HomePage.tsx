@@ -5,15 +5,18 @@ import React from 'react';
 
 import CardItem from "../components/CardItem";
 import InterfacePill from "../models/interfacePill";
-import Pills from "../models/Pills";
 import CardStore from "../store/CardStore";
+import AppStore from "../store/AppStore";
 
 
-
-const  HomePage = inject('CardStore')(observer((props:any) => {
+const  HomePage = observer((props:any) => {
   const pills:InterfacePill[]=CardStore.pills;
+
+
+
   return (
     <div className="home-page">
+
       {
 
         pills.map((pill:InterfacePill) => <CardItem key={pill.id} pills={pill}/>)
@@ -22,6 +25,6 @@ const  HomePage = inject('CardStore')(observer((props:any) => {
     </div>
   );
 }
-));
+);
 
 export default HomePage;

@@ -14,13 +14,13 @@ const theme = createTheme({
   typography: {
     fontFamily: "Roboto",
     h1: {
-      fontSize: "1em"
+      fontSize: "45px"
     },
     h2: {
-      fontSize: "0.6em"
+      fontSize: "38px"
     },
     h3: {
-      fontSize: "0.4em"
+      fontSize: "32px"
     },
     fontWeightLight: 400,
     fontWeightRegular:500,

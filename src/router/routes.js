@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,6 +9,7 @@ import CardPage from "../pages/CardPage";
 import HomePage from "../pages/HomePage";
 import NotFound from "../pages/NotFound";
 
+
 const Routers = () => {
   return (
     <Router>
@@ -16,7 +17,7 @@ const Routers = () => {
         <Header/>
         <Routes>
           <Route  path="/" element={<HomePage/>}/>
-          <Route  path="/cardPage" element={<CardPage/>}/>
+          <Route  path="/:id" element={<CardPage/>}/>
           <Route  path="/*" element={<NotFound/>}/>
         </Routes>
       </div>
