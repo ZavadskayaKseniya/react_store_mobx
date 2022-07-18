@@ -1,6 +1,6 @@
 import {makeAutoObservable, makeObservable, observable} from "mobx";
 
-class AppStore {
+class BasketStore {
 
   constructor() {
 
@@ -10,5 +10,5 @@ class AppStore {
 
 
 }
-const store = new AppStore();
+const store = new BasketStore();
 export default store;

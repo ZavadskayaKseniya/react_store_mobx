@@ -7,12 +7,15 @@ import React, {createContext} from 'react';
 
 import Routers from "./router/routes";
 import theme from "./styles/Theme";
+import DataFetching from "./swagger/DataFetching";
+
 
 
 enum stores {
 
   CardStore = "CardStore",
-  AppStore = "AppStore"
+  AppStore = "AppStore",
+  BasketStore = "BasketStore"
 
 }
 
@@ -23,6 +26,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Provider {...stores}>
+        <DataFetching/>
         <Routers/>
       </Provider>
     </ThemeProvider>
