@@ -12,6 +12,7 @@ function NetworkService() {
 
 
 
+
   const requestOptions = {
     method: 'POST',
     headers: {
@@ -23,6 +24,7 @@ function NetworkService() {
   };
 
   return (
+
     fetch(url, requestOptions)
       .then(response => response.json())
 
