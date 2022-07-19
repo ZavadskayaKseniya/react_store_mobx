@@ -1,15 +1,15 @@
 import {makeAutoObservable, observable,action, reaction,runInAction} from "mobx";
 
-import data from "../data";
+
 import InterfacePill from "../models/interfacePill";
-import Pills from "../models/Pills";
+
 
 
 class CardStore {
 
   @observable isCartOpen = false;
 
-  @observable pills:Pills[] ;
+  @observable pills:InterfacePill[] ;
 
   constructor() {
     this.pills=[];
@@ -24,7 +24,7 @@ class CardStore {
 
   @action
     setItems = (products: InterfacePill[]) => {
-      this.pills = products.map((product: InterfacePill) => new Pills(product));
+      this.pills = products;
     };
 
   @action

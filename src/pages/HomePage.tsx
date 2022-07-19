@@ -11,7 +11,7 @@ import Pills from "../models/Pills";
 
 
 const  HomePage = observer((props:any) => {
-  const pills:Pills[]=CardStore.pills;
+  const pills:InterfacePill[]=CardStore.pills;
 
 
 
@@ -20,7 +20,7 @@ const  HomePage = observer((props:any) => {
 
       {
 
-        pills.map((pill:Pills) => <CardItem key={pill.id} pills={pill}/>)
+        pills.map((pill:InterfacePill) => <CardItem key={pill.id} pills={pill}/>)
       }
 
     </div>
