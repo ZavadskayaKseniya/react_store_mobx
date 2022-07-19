@@ -7,7 +7,7 @@ import React, {createContext} from 'react';
 
 import Routers from "./router/routes";
 import theme from "./styles/Theme";
-import DataFetching from "./swagger/DataFetching";
+import NetworkService from "./services/NetworkService";
 
 
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Provider {...stores}>
-        <DataFetching/>
+        <NetworkService/>
         <Routers/>
       </Provider>
     </ThemeProvider>

@@ -7,10 +7,11 @@ import CardItem from "../components/CardItem";
 import InterfacePill from "../models/interfacePill";
 import CardStore from "../store/CardStore";
 import AppStore from "../store/AppStore";
+import Pills from "../models/Pills";
 
 
 const  HomePage = observer((props:any) => {
-  const pills:InterfacePill[]=CardStore.pills;
+  const pills:Pills[]=CardStore.pills;
 
 
 
@@ -19,7 +20,7 @@ const  HomePage = observer((props:any) => {
 
       {
 
-        pills.map((pill:InterfacePill) => <CardItem key={pill.id} pills={pill}/>)
+        pills.map((pill:Pills) => <CardItem key={pill.id} pills={pill}/>)
       }
 
     </div>
