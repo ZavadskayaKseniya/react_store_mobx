@@ -4,12 +4,13 @@ import {ThemeProvider} from "@mui/material";
 import {Provider} from "mobx-react";
 import React, {createContext} from 'react';
 
-
 import Routers from "./router/routes";
+import CardService from "./services/CardService";
 import theme from "./styles/Theme";
-import DataFetching from "./swagger/DataFetching";
 
 
+
+CardService();
 
 enum stores {
 
@@ -19,14 +20,18 @@ enum stores {
 
 }
 
-export const Context = createContext({});
+enum services {
+  NetworkService="NetworkService",
+  CardService="CardService"
+
+}
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Provider {...stores}>
-        <DataFetching/>
+      <Provider {...stores} {...services}>
+
         <Routers/>
       </Provider>
     </ThemeProvider>

@@ -6,7 +6,7 @@ import React from 'react';
 import CardItem from "../components/CardItem";
 import InterfacePill from "../models/interfacePill";
 import CardStore from "../store/CardStore";
-import AppStore from "../store/AppStore";
+
 
 
 const  HomePage = observer((props:any) => {
