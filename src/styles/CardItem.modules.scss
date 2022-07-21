@@ -1,4 +1,17 @@
 .card-item {
   margin-right: 20px;
   margin-bottom:20px;
+
+}
+
+.card-item:hover {
+
+  -webkit-box-shadow: -5px 10px 10px 6px rgba(5, 5, 5, 0.55);
+  -moz-box-shadow: -5px 10px 10px 6px rgba(5, 5, 5, 0.55);
+  box-shadow: -5px 10px 10px 6px rgba(5, 5, 5, 0.55);
+
+  overflow: visible;
+  display: block;
+  position: relative;
+
 }

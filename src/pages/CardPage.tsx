@@ -1,11 +1,12 @@
 import "../styles/CardPage.modules.scss";
-import { Typography } from '@mui/material';
 
-import React from 'react';
+import { Typography } from '@mui/material';
 import {observer} from "mobx-react-lite";
-import InterfacePill from "../models/interfacePill";
-import CardStore from "../store/CardStore";
+import React from 'react';
+
 import CardItem from "../components/CardItem";
+import InterfacePill from "../models/interfacePill";
+
 
 const CardPage = observer(({pills}:{pills:InterfacePill}) => {
 

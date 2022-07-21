@@ -7,11 +7,10 @@ export default class NetworkService {
 
   endpoint: string;
 
-  private readonly address: string;
+
 
   constructor(endpoint: string, token:string) {
     this.endpoint = `${endpoint}api/`;
-    this.address = endpoint;
     this.token = token;
   }
 
@@ -20,7 +19,7 @@ export default class NetworkService {
 
 
   fetch  = ({
-    alias, parameters }:{alias: string, parameters?: object}) => {
+    alias, parameters }:{alias: string, parameters: object}) => {
     const options : {method:string,headers:any, body: any} = {
       method: "POST",
       headers: {
@@ -28,7 +27,7 @@ export default class NetworkService {
         'Accept': 'application/json',
         "token": this.token
       },
-      body: parameters,
+      body: JSON.stringify(parameters),
 
     };
 

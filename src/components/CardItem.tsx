@@ -17,9 +17,9 @@ function CardItem({pills}:{pills:InterfacePill}) {
 
   return (
     <div className="card-item" >
-      <Card sx={{ maxWidth: 250 }}>
+      <Card sx={{ width: 280 , height:190, minHeight: 190}}>
 
-        <CardContent>
+        <CardContent >
           <Typography gutterBottom variant="h5" component="div">
             {pills.substance.name}
           </Typography>
@@ -29,7 +29,7 @@ function CardItem({pills}:{pills:InterfacePill}) {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons >В корзину</Buttons>
+          <Buttons>В корзину</Buttons>
         </CardActions>
       </Card>
     </div>
