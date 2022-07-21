@@ -20,15 +20,15 @@ function App() {
 
 
   const endpoint = process.env["ENDPOINT "] as string;
-  console.log(endpoint);
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo';
+
 
   const basketStore = new BasketStore();
   const cardStore = new CardStore();
   const appStore = new AppStore();
 
-  const networkService = new NetworkService("http://77.223.99.133:8080/",'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo');
+  const networkService = new NetworkService(endpoint,token);
   const cardService = new CardService(networkService, cardStore);
-
   cardService.getPills();
 
 
