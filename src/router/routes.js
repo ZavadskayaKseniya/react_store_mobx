@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment} from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,36 +10,24 @@ import HomePage from "../pages/HomePage";
 import NotFound from "../pages/NotFound";
 
 
-const MainPage = () => {
+
+function getPage(Component) {
   return (
-    <Fragment>
+    <div className="App">
       <Header/>
-      <HomePage/>
-    </Fragment>
+      <Component/>
+    </div>
   );
-};
-
-const PillPage = () => {
-  return (
-    <Fragment>
-      <Header/>
-      <CardPage/>
-    </Fragment>
-  );
-};
-
-
+}
 
 const Routers = () => {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route  path="/" element={<MainPage/>}/>
-          <Route  path="/:{id}" element={<PillPage/>}/>
-          <Route  path="/*" element={<NotFound/>}/>
-        </Routes>
-      </div>
+      <Routes>
+        <Route  path="/" element={getPage(HomePage)}/>
+        <Route  path="/:{id}" element={getPage(CardPage)}/>
+        <Route  path="/*" element={<NotFound/>}/>
+      </Routes>
     </Router>
   );
 };

@@ -1,37 +1,50 @@
-import {useEffect, useState} from "react";
-
-import InterfacePill from "../models/interfacePill";
-import Pills from "../models/Pills";
-
-
-function NetworkService() {
-
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo';
-
-  const url = 'http://77.223.99.133:8080/api/products/part';
 
 
 
+export default class NetworkService {
 
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'token': token
-    },
-    body: JSON.stringify({ offset:0, limit:6 })
+  token: string;
+
+  endpoint: string;
+
+  private readonly address: string;
+
+  constructor(endpoint: string, token:string) {
+    this.endpoint = `${endpoint}api/`;
+    this.address = endpoint;
+    this.token = token;
+  }
+
+  // token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluIiwiaWQiOjgsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYyNzI5MjAyOX0.smA9a5v47rs-oG2loD1jR5Zd5RlGqmb0XN0KWjniyKo';
+
+
+
+  fetch  = ({
+    alias, parameters }:{alias: string, parameters?: object}) => {
+    const options : {method:string,headers:any, body: any} = {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        "token": this.token
+      },
+      body: parameters,
+
+    };
+
+    return (
+      fetch(`${this.endpoint}${alias}`,options)
+        .then(response => response.json())
+    );
   };
 
-  return (
 
-    fetch(url, requestOptions)
-      .then(response => response.json())
 
-  );
 
-};
+}
 
-export default NetworkService;
+
+
+
 
   

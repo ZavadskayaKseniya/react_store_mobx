@@ -4,7 +4,6 @@ import {makeAutoObservable, observable,action, reaction,runInAction} from "mobx"
 import InterfacePill from "../models/interfacePill";
 
 
-
 class CardStore {
 
   @observable isCartOpen = false;
@@ -16,11 +15,6 @@ class CardStore {
     makeAutoObservable(this);
   }
 
-
-
-  
-  // @observable
-  //   pills:InterfacePill[]=data.products;
 
   @action
     setItems = (products: InterfacePill[]) => {
@@ -41,8 +35,8 @@ class CardStore {
 
 }
 
-const store = new CardStore();
-export default store;
+
+export default CardStore;
 
 
 
