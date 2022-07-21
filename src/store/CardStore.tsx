@@ -16,11 +16,6 @@ class CardStore {
   }
 
 
-
-  
-  // @observable
-  //   pills:InterfacePill[]=data.products;
-
   @action
     setItems = (products: InterfacePill[]) => {
       this.pills = products;
@@ -40,8 +35,8 @@ class CardStore {
 
 }
 
-const store = new CardStore();
-export default store;
+
+export default CardStore;
 
 
 

@@ -16,5 +16,5 @@ class BasketStore {
   }
 
 }
-const store = new BasketStore();
-export default store;
+
+export default BasketStore;

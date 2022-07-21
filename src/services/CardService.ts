@@ -2,13 +2,26 @@ import CardStore from "../store/CardStore";
 import NetworkService from "./NetworkService";
 
 
+const limitCard = 6;
 
-async function CardService() {
+export default class CardService {
 
+  networkService : NetworkService;
 
-  const data = await NetworkService();
-  CardStore.setItems(data.data.products);
+  cardStore : CardStore;
+
+  constructor(networkService: NetworkService, cardStore: CardStore) {
+    this.networkService = networkService;
+    this.cardStore = cardStore;
+  }
+
+  async getPills() {
+    const {respond} = await this.networkService.fetch({alias: 'products/part', parameters: {offset: 0, limit: limitCard}});
+    this.cardStore.setItems(respond.data.products);
+  }
+
 
 
 };
-export default CardService;
+
+
