@@ -28,7 +28,7 @@ class CardStore {
 
   @action
   getPillById(id:number) {
-    return this.pills[id];
+    return this.pills.find((pill:InterfacePill) => pill.id === id);
   }
 
 

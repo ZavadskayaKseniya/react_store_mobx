@@ -32,6 +32,7 @@ function App() {
 
 
 
+
   const stores = {
     [StoresNames.BasketStore]: basketStore,
     [StoresNames.CardStore]: cardStore,

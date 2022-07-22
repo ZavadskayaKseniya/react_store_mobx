@@ -22,6 +22,7 @@ const  HomePage = (props:any) => {
 
 
 
+
   useEffect(() => {
     props.CardService.getPills().finally(() => {
       setIsFetch(false);
@@ -45,6 +46,15 @@ const  HomePage = (props:any) => {
 
 
 
+  const handlerClick = (e: React.ChangeEvent<unknown>) => {
+    e.stopPropagation();
+    props.BasketStore.setPillsInCart(pills);
+    console.log(props.BasketStore.pillsInCart);
+  };
+
+
+
+
 
   return (
     <div className="home-page">
@@ -59,7 +69,11 @@ const  HomePage = (props:any) => {
 
       <div className="home-page_cards">
         {
-          currentCard.map((pill:InterfacePill) => <CardItem key={pill.id} pills={pill}/>)
+          currentCard.map((pill:InterfacePill) => <CardItem onClick={() => {
+            props.BasketStore.setPillsInCart(pill);
+            console.log(props.BasketStore.pillsInCart);
+          }
+          }  key={pill.id} pills={pill}/>)
         }
       </div>
     </div>
@@ -67,4 +81,4 @@ const  HomePage = (props:any) => {
 }
 ;
 
-export default inject(StoresNames.CardStore, ServicesNames.CardService)(observer(HomePage));
+export default inject(StoresNames.CardStore,StoresNames.BasketStore, ServicesNames.CardService)(observer(HomePage));

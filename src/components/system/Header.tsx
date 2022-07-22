@@ -9,7 +9,11 @@ function Header() {
     <div className="header">
       <AppBar>
         <Toolbar sx={{ justifyContent: "space-between", backgroundColor:"rgba(38,38,38,0.95)" }}>
-          <Typography>Lekař</Typography>
+          <Typography sx={{"&:hover": {
+
+              color: "rgba(150,150,150,0.85)",
+              cursor: "pointer"
+            }}}>Lekař</Typography>
           <MdAddShoppingCart size={25} className="icon"/>
         </Toolbar>
 

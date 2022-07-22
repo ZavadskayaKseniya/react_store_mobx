@@ -3,17 +3,23 @@ import '../styles/CardItem.modules.scss';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-
 import Typography from '@mui/material/Typography';
+import {inject, observer} from "mobx-react";
 import React from 'react';
 
-import Buttons from "./coommon/Buttons";
 import InterfacePill from "../models/interfacePill";
+import {StoresNames} from "../store/StoresNames";
+import Buttons from "./coommon/Buttons";
+import BasketStore from "../store/BasketStore";
 
 
 
 
-function CardItem({pills}:{pills:InterfacePill}) {
+const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
+
+
+
+
 
   return (
     <div className="card-item" >
@@ -29,10 +35,10 @@ function CardItem({pills}:{pills:InterfacePill}) {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons>В корзину</Buttons>
+          <Buttons onClick={onClick} >В корзину</Buttons>
         </CardActions>
       </Card>
     </div>
   );
-}
+};
 export default CardItem;

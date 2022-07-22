@@ -1,9 +1,14 @@
 import {action, makeAutoObservable, makeObservable, observable} from "mobx";
 
+import InterfacePill from "../models/interfacePill";
+
+
 
 class BasketStore {
 
-  @observable addedCard:string[];
+
+
+  @observable pillsInCart:InterfacePill[];
 
   constructor() {
 
@@ -11,9 +16,16 @@ class BasketStore {
   }
 
   @action 
-  clear() {
-    this.addedCard=[];
-  }
+    setPillsInCart=(pill:InterfacePill) => 
+    {
+      this.pillsInCart.push(pill);
+    };
+  
+  @action
+    deletePillsFromCart=(cardId:number) =>
+    {
+      this.pillsInCart= this.pillsInCart.filter(pill => pill.id !== cardId);
+    };
 
 }
 
