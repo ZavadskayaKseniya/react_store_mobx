@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Routes} from "react-router-dom";
 
 import Header from "../components/system/Header";
+import BasketPage from "../pages/BasketPage";
 import CardPage from "../pages/CardPage";
 import HomePage from "../pages/HomePage";
 import NotFound from "../pages/NotFound";
@@ -26,6 +27,7 @@ const Routers = () => {
       <Routes>
         <Route  path="/" element={getPage(HomePage)}/>
         <Route  path="/:{id}" element={getPage(CardPage)}/>
+        <Route  path="/basket" element={getPage(BasketPage)}/>
         <Route  path="/*" element={<NotFound/>}/>
       </Routes>
     </Router>
