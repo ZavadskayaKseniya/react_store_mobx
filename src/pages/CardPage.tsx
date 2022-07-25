@@ -5,8 +5,6 @@ import {observer} from "mobx-react-lite";
 import React from 'react';
 
 import {inject} from "mobx-react";
-import CardItem from "../components/CardItem";
-import InterfacePill from "../models/interfacePill";
 import {useParams} from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
