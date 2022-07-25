@@ -11,7 +11,7 @@ class BasketStore {
   @observable pillsInCart:InterfacePill[];
 
   constructor() {
-
+    this.pillsInCart = [];
     makeAutoObservable(this);
   }
 

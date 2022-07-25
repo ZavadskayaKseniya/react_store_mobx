@@ -71,7 +71,8 @@ const  HomePage = (props:any) => {
         {
           currentCard.map((pill:InterfacePill) => <CardItem onClick={() => {
             props.BasketStore.setPillsInCart(pill);
-            console.log(props.BasketStore.pillsInCart);
+            console.log(props.BasketStore.pillsInCart, "..pillInCart");
+
           }
           }  key={pill.id} pills={pill}/>)
         }

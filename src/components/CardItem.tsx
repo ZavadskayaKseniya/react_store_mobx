@@ -18,9 +18,6 @@ import BasketStore from "../store/BasketStore";
 const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
 
 
-
-
-
   return (
     <div className="card-item" >
       <Card sx={{ width: 280 , height:190, minHeight: 190}}>
@@ -35,7 +32,7 @@ const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons onClick={onClick} >В корзину</Buttons>
+          <Buttons onClick={onClick} color="error">В корзину</Buttons>
         </CardActions>
       </Card>
     </div>
