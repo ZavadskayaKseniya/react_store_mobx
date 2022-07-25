@@ -1,7 +1,7 @@
 import {makeAutoObservable, observable,action, reaction,runInAction} from "mobx";
 
 
-import InterfacePill from "../models/interfacePill";
+import InterfacePill from "@/models/interfacePill";
 
 
 class CardStore {

@@ -4,11 +4,11 @@ import {
   Route,
   Routes} from "react-router-dom";
 
-import Header from "../components/system/Header";
-import BasketPage from "../pages/BasketPage";
-import CardPage from "../pages/CardPage";
-import HomePage from "../pages/HomePage";
-import NotFound from "../pages/NotFound";
+import Header from "@/components/system/Header";
+import BasketPage from "@/pages/BasketPage";
+import CardPage from "@/pages/CardPage";
+import HomePage from "@/pages/HomePage";
+import NotFound from "@/pages/NotFound";
 
 
 

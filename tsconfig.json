@@ -1,14 +1,21 @@
 {
 
-  "extends": "./tsconfig.paths.json",
+
 
   "compilerOptions": {
-    "baseUrl":".",
-//    "baseUrl": "./src",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["../src/*"],
+      "@pages/*": ["../src/pages/*"],
+      "@styles/*": ["../src/styles/*"],
+      "@services/*": ["../src/services/*"],
+      "@models/*": ["../src/models/*"],
+      "@store/*": ["../src/store/*"],
+      "@router/*": ["../src/router/*"],
+
     },
     "outDir": "build/dist",
+    "resolveJsonModule": true,
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],

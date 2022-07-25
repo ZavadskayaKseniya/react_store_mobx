@@ -1,5 +1,6 @@
+import "@/styles/CartCircle.modules.scss";
+
 import React from 'react';
-import "../../styles/CartCircle.modules.scss";
 
 const CartCircle = ({
   quantity=0

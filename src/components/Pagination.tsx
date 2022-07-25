@@ -1,6 +1,7 @@
-import React, {ReactFragment} from 'react';
-import "../styles/Pagination.modules.scss";
+import "@/styles/Pagination.modules.scss";
+
 import {Button} from "@mui/material";
+import React, {ReactFragment} from 'react';
 
 const Pagination = ({ cardsPerPage, totalCards, paginate,nextPage,prevPage}:{cardsPerPage:number, totalCards:number, paginate:any,prevPage:any,nextPage:any}) => {
   const pageNumbers = [];

@@ -1,4 +1,4 @@
-import "../styles/BasketPage.modules.scss";
+import "@/styles/BasketPage.modules.scss";
 
 import {Button} from "@mui/material";
 import Card from "@mui/material/Card";
@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 import {inject, observer} from "mobx-react";
 import React from 'react';
 
-import interfacePill from "../models/interfacePill";
-import {StoresNames} from "../store/StoresNames";
+import interfacePill from "@/models/interfacePill";
+import {StoresNames} from "@/store/StoresNames";
 
 function BasketPage(props:any) {
   const {pillsInCart} = props.BasketStore;

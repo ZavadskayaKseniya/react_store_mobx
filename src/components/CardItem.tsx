@@ -1,16 +1,15 @@
-import '../styles/CardItem.modules.scss';
+import '@/styles/CardItem.modules.scss';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import {inject, observer} from "mobx-react";
 import React from 'react';
 
-import InterfacePill from "../models/interfacePill";
-import {StoresNames} from "../store/StoresNames";
+import InterfacePill from "@/models/interfacePill";
+
 import Buttons from "./coommon/Buttons";
-import BasketStore from "../store/BasketStore";
+
 
 
 

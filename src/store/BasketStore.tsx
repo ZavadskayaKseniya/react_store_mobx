@@ -1,6 +1,6 @@
 import {action, makeAutoObservable, makeObservable, observable} from "mobx";
 
-import InterfacePill from "../models/interfacePill";
+import InterfacePill from "@/models/interfacePill";
 
 
 
