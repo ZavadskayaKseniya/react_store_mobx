@@ -15,7 +15,7 @@ export default class CardService {
   }
 
   async getPills() {
-    const respond = await this.networkService.fetch({alias: 'products/part', parameters: {offset: 0, limit: 5}});
+    const respond = await this.networkService.fetch({alias: 'products/part', parameters: {offset: 0, limit: 50}});
     this.cardStore.setItems(respond.data.products);
   }
 

@@ -17,7 +17,7 @@ const  HomePage = (props:any) => {
   const [isFetch, setIsFetch] = useState(true);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage] = useState(5);
+  const [cardsPerPage] = useState(9);
 
 
 

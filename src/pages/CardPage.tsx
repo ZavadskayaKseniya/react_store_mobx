@@ -10,13 +10,20 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 
 import Buttons from "@/components/coommon/Buttons";
+import {StoresNames} from "@/store/StoresNames";
+import CardItem from "@/components/CardItem";
 
 
-const CardPage = inject((observer((props:any) => {
+class interfacePill {
+}
+
+const CardPage = (props:any) => {
   const cardStore = props.CardStore;
   const {id} = useParams();
 
   const pill = cardStore.getPillById(Number(id));
+
+
 
 
 
@@ -34,13 +41,11 @@ const CardPage = inject((observer((props:any) => {
             {pill.name}
           </Typography>
         </CardContent>
-        <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons>В корзину</Buttons>
-        </CardActions>
+
       </Card>
 
     </div>
   );
-})));
+};
 
-export default CardPage;
+export default inject(StoresNames.CardStore)(observer(CardPage));

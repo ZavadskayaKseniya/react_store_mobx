@@ -16,7 +16,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate,nextPage,prevPage}:{car
       <Button className="pagination_btn" onClick={nextPage}>...</Button>
       {
         pageNumbers.map(number => (
-          <a className="page-link" href="#" key={number} onClick={() => paginate(number)}>
+          <a className="page-link bg-transparent" href="#" key={number} onClick={() => paginate(number)}>
             {number}
           </a>
         ))

@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import InterfacePill from "@/models/interfacePill";
+import CardPage from "@/pages/CardPage";
 
 import Buttons from "./coommon/Buttons";
 
