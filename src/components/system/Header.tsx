@@ -1,12 +1,18 @@
 import '../../styles/header.modules.scss';
 
 import {AppBar, Toolbar, Typography} from "@mui/material";
+import {inject, observer} from "mobx-react";
 import React from 'react';
 import { MdAddShoppingCart } from "react-icons/md";
 import {Link} from "react-router-dom";
 
-function Header() {
+import {StoresNames} from "../../store/StoresNames";
+import CartCircle from "./CartCircle";
+
+function Header(props:any) {
+  const pills = props.BasketStore.pillsInCart;
   return (
+    
     <div className="header">
       <AppBar>
         <Toolbar sx={{ justifyContent: "space-between", backgroundColor:"rgba(38,38,38,0.95)" }}>
@@ -17,9 +23,13 @@ function Header() {
               cursor: "pointer"
             }}}>Lekař</Typography>
           </Link>
+
           <Link to="/basket">
             <MdAddShoppingCart size={25} className="icon"/>
+            <CartCircle quantity={pills.length}/>
+            <CartCircle quantity={pills.length}/>
           </Link>
+
         </Toolbar>
 
       </AppBar>
@@ -27,4 +37,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default inject(StoresNames.CardStore,StoresNames.BasketStore)(observer(Header));
