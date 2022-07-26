@@ -1,0 +1,16 @@
+.cart-circle {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: rgba(234, 230, 230, 0.87);
+  color:black;
+  border-radius: 15px;
+  font-size:13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  right: 39px;
+  top: 10px;
+  cursor:pointer;
+}

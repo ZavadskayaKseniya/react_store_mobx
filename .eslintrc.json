@@ -16,7 +16,11 @@
         "eslint-config-prettier"
     ],
     "parser": "@typescript-eslint/parser",
+
+
     "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./",
         "ecmaVersion": 2019,
         "sourceType": "module",
         "ecmaFeatures": {
@@ -24,6 +28,7 @@
         }
     },
     "rules": {
+        "import/no-unresolved": "error",
         "template-curly-spacing": "off",
         "arrow-body-style": "off",
         "no-unused-vars": "off",
@@ -155,11 +160,18 @@
     },
     "plugins": ["jest", "@babel", "react", "react-hooks", "@typescript-eslint", "simple-import-sort"],
     "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [",.ts", ",.tsx"]
+        },
+
         "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            },
             "node": {
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            },
-            "typescript": {}
+            }
+
         }
     }
 }

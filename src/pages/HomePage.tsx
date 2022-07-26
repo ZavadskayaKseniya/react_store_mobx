@@ -1,13 +1,13 @@
-import '../styles/HomePage.modules.scss';
+import '@/styles/HomePage.modules.scss';
 
+import {ServicesNames} from "@/services/ServicesNames";
+import {StoresNames} from "@/store/StoresNames";
 import {inject, observer} from "mobx-react";
 import React, {useEffect, useState} from 'react';
 
-import CardItem from "../components/CardItem";
-import Pagination from "../components/Pagination";
-import InterfacePill from "../models/interfacePill";
-import {ServicesNames} from "../services/ServicesNames";
-import {StoresNames} from "../store/StoresNames";
+import CardItem from "@/components/CardItem";
+import Pagination from "@/components/Pagination";
+import InterfacePill from "@/models/interfacePill";
 
 
 
@@ -71,6 +71,8 @@ const  HomePage = (props:any) => {
         {
           currentCard.map((pill:InterfacePill) => <CardItem onClick={() => {
             props.BasketStore.setPillsInCart(pill);
+            console.log(props.BasketStore.pillsInCart, "..pillInCart");
+
           }
           }  key={pill.id} pills={pill}/>)
         }

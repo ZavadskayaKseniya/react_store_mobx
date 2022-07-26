@@ -4,11 +4,12 @@ import {
   Route,
   Routes} from "react-router-dom";
 
-import Header from "../components/system/Header";
-import BasketPage from "../pages/BasketPage";
-import CardPage from "../pages/CardPage";
-import HomePage from "../pages/HomePage";
-import NotFound from "../pages/NotFound";
+import Header from "@/components/system/Header";
+import BasketPage from "@/pages/BasketPage";
+import CardPage from "@/pages/CardPage";
+import HomePage from "@/pages/HomePage";
+import NotFound from "@/pages/NotFound";
+import Auth from "@/pages/Auth";
 
 
 
@@ -26,7 +27,8 @@ const Routers = () => {
     <Router>
       <Routes>
         <Route  path="/" element={getPage(HomePage)}/>
-        <Route  path="/:{id}" element={getPage(CardPage)}/>
+        <Route  path="/pill/:{id}" element={getPage(CardPage)}/>
+        <Route path="/auth" element={getPage(Auth)} />
         <Route  path="/basket" element={getPage(BasketPage)}/>
         <Route  path="/*" element={<NotFound/>}/>
       </Routes>

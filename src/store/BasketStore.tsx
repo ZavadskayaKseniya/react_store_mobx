@@ -1,6 +1,6 @@
 import {action, makeAutoObservable, makeObservable, observable} from "mobx";
 
-import InterfacePill from "../models/interfacePill";
+import InterfacePill from "@/models/interfacePill";
 
 
 
@@ -11,7 +11,7 @@ class BasketStore {
   @observable pillsInCart:InterfacePill[];
 
   constructor() {
-
+    this.pillsInCart = [];
     makeAutoObservable(this);
   }
 

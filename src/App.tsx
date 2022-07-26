@@ -1,18 +1,18 @@
-import './styles/App.modules.scss';
+import '@/styles/App.modules.scss';
 
 import {ThemeProvider} from "@mui/material";
 import {Provider} from "mobx-react";
 import React, {createContext} from 'react';
 
-import Routers from "./router/routes";
-import CardService from "./services/CardService";
-import NetworkService from "./services/NetworkService";
-import {ServicesNames} from "./services/ServicesNames";
-import AppStore from "./store/AppStore";
-import BasketStore from "./store/BasketStore";
-import CardStore from "./store/CardStore";
-import {StoresNames} from "./store/StoresNames";
-import theme from "./styles/Theme";
+import Routers from "@/router/routes";
+import CardService from "@/services/CardService";
+import NetworkService from "@/services/NetworkService";
+import {ServicesNames} from "@/services/ServicesNames";
+import AppStore from "@/store/AppStore";
+import BasketStore from "@/store/BasketStore";
+import CardStore from "@/store/CardStore";
+import {StoresNames} from "@/store/StoresNames";
+import theme from "@/styles/Theme";
 
 
 

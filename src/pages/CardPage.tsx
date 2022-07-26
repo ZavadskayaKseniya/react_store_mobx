@@ -1,24 +1,29 @@
-import "../styles/CardPage.modules.scss";
+import "@/styles/CardPage.modules.scss";
 
 import { Typography } from '@mui/material';
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import {inject} from "mobx-react";
 import {observer} from "mobx-react-lite";
 import React from 'react';
-
-import {inject} from "mobx-react";
-import CardItem from "../components/CardItem";
-import InterfacePill from "../models/interfacePill";
 import {useParams} from "react-router-dom";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Buttons from "../components/coommon/Buttons";
+
+import Buttons from "@/components/coommon/Buttons";
+import {StoresNames} from "@/store/StoresNames";
+import CardItem from "@/components/CardItem";
 
 
-const CardPage = inject((observer((props:any) => {
+class interfacePill {
+}
+
+const CardPage = (props:any) => {
   const cardStore = props.CardStore;
   const {id} = useParams();
 
   const pill = cardStore.getPillById(Number(id));
+
+
 
 
 
@@ -36,13 +41,11 @@ const CardPage = inject((observer((props:any) => {
             {pill.name}
           </Typography>
         </CardContent>
-        <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons>В корзину</Buttons>
-        </CardActions>
+
       </Card>
 
     </div>
   );
-})));
+};
 
-export default CardPage;
+export default inject(StoresNames.CardStore)(observer(CardPage));

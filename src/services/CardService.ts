@@ -1,4 +1,4 @@
-import CardStore from "../store/CardStore";
+import CardStore from "@/store/CardStore";
 import NetworkService from "./NetworkService";
 
 
@@ -15,7 +15,7 @@ export default class CardService {
   }
 
   async getPills() {
-    const respond = await this.networkService.fetch({alias: 'products/part', parameters: {offset: 0, limit: 100}});
+    const respond = await this.networkService.fetch({alias: 'products/part', parameters: {offset: 0, limit: 50}});
     this.cardStore.setItems(respond.data.products);
   }
 

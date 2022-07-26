@@ -1,16 +1,16 @@
-import '../styles/CardItem.modules.scss';
+import '@/styles/CardItem.modules.scss';
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import {inject, observer} from "mobx-react";
 import React from 'react';
 
-import InterfacePill from "../models/interfacePill";
-import {StoresNames} from "../store/StoresNames";
+import InterfacePill from "@/models/interfacePill";
+import CardPage from "@/pages/CardPage";
+
 import Buttons from "./coommon/Buttons";
-import BasketStore from "../store/BasketStore";
+
 
 
 
@@ -32,7 +32,7 @@ const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "flex-end"}}>
-          <Buttons onClick={onClick} >В корзину</Buttons>
+          <Buttons onClick={onClick} color="error">В корзину</Buttons>
         </CardActions>
       </Card>
     </div>

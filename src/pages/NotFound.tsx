@@ -1,4 +1,4 @@
-import "../styles/NotFound.modules.scss";
+import "@/styles/NotFound.modules.scss";
 
 import React from 'react';
 
