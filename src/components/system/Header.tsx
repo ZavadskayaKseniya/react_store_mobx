@@ -1,6 +1,6 @@
 import '@/styles/header.modules.scss';
 
-import {AppBar, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, Toolbar, Typography} from "@mui/material";
 import {inject, observer} from "mobx-react";
 import React from 'react';
 import { MdAddShoppingCart } from "react-icons/md";
@@ -25,6 +25,7 @@ function Header(props:any) {
             }}}>Lekař</Typography>
           </Link>
 
+          <Button className="btn btn-outline-danger" component={Link} to="/auth" sx={{color: "white"}}>Авторизация</Button>
           <Link to="/basket">
             <MdAddShoppingCart size={25} className="icon"/>
             <CartCircle quantity={pills.length}/>
