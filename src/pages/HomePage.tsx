@@ -49,7 +49,6 @@ const  HomePage = (props:any) => {
   const handlerClick = (e: React.ChangeEvent<unknown>) => {
     e.stopPropagation();
     props.BasketStore.setPillsInCart(pills);
-    console.log(props.BasketStore.pillsInCart);
   };
 
 
@@ -71,8 +70,6 @@ const  HomePage = (props:any) => {
         {
           currentCard.map((pill:InterfacePill) => <CardItem onClick={() => {
             props.BasketStore.setPillsInCart(pill);
-            console.log(props.BasketStore.pillsInCart, "..pillInCart");
-
           }
           }  key={pill.id} pills={pill}/>)
         }

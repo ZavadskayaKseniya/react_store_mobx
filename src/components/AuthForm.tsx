@@ -1,12 +1,15 @@
 import {Button, TextField} from "@mui/material";
 import Typography from "@mui/material/Typography";
+import {toJS} from "mobx";
+import {inject} from "mobx-react";
+import {observer} from "mobx-react-lite";
 import React from 'react';
 import {Card} from "react-bootstrap";
-import {useForm, Controller, SubmitHandler, useFormState} from "react-hook-form";
-import {inject} from "mobx-react";
+import {Controller, SubmitHandler, useForm, useFormState} from "react-hook-form";
+
 import {StoresNames} from "@/store/StoresNames";
-import {observer} from "mobx-react-lite";
-import {toJS} from "mobx";
+import {useNavigate} from "react-router-dom";
+
 
 interface  IAuth {
   password: string;
@@ -15,10 +18,15 @@ interface  IAuth {
 function AuthForm(props:any) {
   const dataApp:IAuth = props.AppStore.user;
   const { handleSubmit, control} = useForm<IAuth>();
+
+  const navigate = useNavigate();
+
+
   const onSubmit:SubmitHandler<IAuth>= (data) => {
-    console.log("data  ", data);
-    const dd= toJS(dataApp);
-    console.log("data AppStore  ", dd);
+    if (String(data)===String(toJS(dataApp))){
+      props.AppStore.setIsAuth(true);
+      navigate(`/catalog`);
+    };
 
 
   };
