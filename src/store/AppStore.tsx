@@ -4,14 +4,13 @@ class AppStore {
 
  @observable isAuth:boolean;
 
- @observable user: object;
+ @observable user: object ={login: '@user', password: '12345'};
 
  @observable token:string;
 
 
  constructor() {
    this.isAuth = false;
-   this.user = {};
    makeAutoObservable(this);
  }
 

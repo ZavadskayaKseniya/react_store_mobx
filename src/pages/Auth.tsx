@@ -2,17 +2,14 @@ import {StoresNames} from "@/store/StoresNames";
 import {inject, observer} from "mobx-react";
 import React, {useState} from 'react';
 import {Card} from "react-bootstrap";
+import AuthForm from "@/components/AuthForm";
 
 
 const Auth = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  return (
-    <div className="auth-page d-flex justify-content-center align-items-center mt-5">
-      <Card style={{width: 600}} className="p-5">
 
-        Auth
-      </Card>
+  return (
+    <div className="auth-page">
+      <AuthForm/>
     </div>
   );
 };
