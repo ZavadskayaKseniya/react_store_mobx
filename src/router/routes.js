@@ -26,8 +26,8 @@ const Routers = () => {
   return (
     <Router>
       <Routes>
-        <Route  path="/" element={getPage(Auth)}/>
-        <Route  path="/pill/:{id}" element={getPage(CardPage)}/>
+        <Route  path="/" element={<Auth/>}/>
+        <Route  path="/card/:id" element={getPage(CardPage)}/>
         <Route path="/catalog" element={getPage(HomePage)} />
         <Route  path="/basket" element={getPage(BasketPage)}/>
         <Route  path="/*" element={<NotFound/>}/>

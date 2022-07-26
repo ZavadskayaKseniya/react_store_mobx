@@ -8,7 +8,7 @@ import AuthForm from "@/components/AuthForm";
 const Auth = () => {
 
   return (
-    <div className="auth-page">
+    <div className="auth-page d-flex justify-content-center align-items-center">
       <AuthForm/>
     </div>
   );

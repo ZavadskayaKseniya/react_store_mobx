@@ -17,7 +17,7 @@ function Header(props:any) {
     <div className="header">
       <AppBar>
         <Toolbar sx={{ justifyContent: "space-between", backgroundColor:"rgba(38,38,38,0.95)" }}>
-          <Link to="/" style={{textDecoration:'none',color: "white"}}>
+          <Link to="/catalog" style={{textDecoration:'none',color: "white"}}>
             <Typography sx={{"&:hover": {
 
               color: "rgba(150,150,150,0.85)",
@@ -25,7 +25,7 @@ function Header(props:any) {
             }}}>Lekař</Typography>
           </Link>
 
-          <Button className="btn btn-outline-danger" component={Link} to="/auth" sx={{color: "white"}}>Авторизация</Button>
+
           <Link to="/basket">
             <MdAddShoppingCart size={25} className="icon"/>
             <CartCircle quantity={pills.length}/>

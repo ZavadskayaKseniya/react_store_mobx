@@ -5,9 +5,10 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 import InterfacePill from "@/models/interfacePill";
-import CardPage from "@/pages/CardPage";
+
 
 import Buttons from "./coommon/Buttons";
 
@@ -15,11 +16,15 @@ import Buttons from "./coommon/Buttons";
 
 
 
-const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
+function CardItem({pills, onClick,props}:{pills:InterfacePill, onClick:any, props:any}) {
 
+  const navigate = useNavigate();
 
+  const handlerClick = (e: React.ChangeEvent<unknown>) => {
+    navigate(`/card/${pills.id}`);
+  };
   return (
-    <div className="card-item" >
+    <div className="card-item" onClick={handlerClick} >
       <Card sx={{ width: 280 , height:190, minHeight: 190}}>
 
         <CardContent >
@@ -37,5 +42,5 @@ const CardItem = ({pills, onClick}:{pills:InterfacePill, onClick:any}) => {
       </Card>
     </div>
   );
-};
+}
 export default CardItem;
