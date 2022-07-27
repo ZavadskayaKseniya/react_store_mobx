@@ -9,7 +9,7 @@ const theme = createTheme({
     error: {
       main:"#c00202"},
     warning : {
-      main: "#fff"
+      main: "#656464"
     }
 
   },

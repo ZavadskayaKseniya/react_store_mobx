@@ -3,6 +3,7 @@ import {inject, observer} from "mobx-react";
 import React, {useState} from 'react';
 import {Card} from "react-bootstrap";
 import AuthForm from "@/components/AuthForm";
+import "@/styles/Auth.modules.scss";
 
 
 const Auth = () => {

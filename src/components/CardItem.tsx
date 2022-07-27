@@ -24,10 +24,10 @@ function CardItem({pills, onClick,props}:{pills:InterfacePill, onClick:any, prop
     navigate(`/card/${pills.id}`);
   };
   return (
-    <div className="card-item" onClick={handlerClick} >
-      <Card sx={{ width: 280 , height:190, minHeight: 190}}>
+    <div className="card-item"  >
+      <Card sx={{ width: 280 , height:190, minHeight: 190}} >
 
-        <CardContent >
+        <CardContent onClick={handlerClick} >
           <Typography gutterBottom variant="h5" component="div">
             {pills.substance.name}
           </Typography>

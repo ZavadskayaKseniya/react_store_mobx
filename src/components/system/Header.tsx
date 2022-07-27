@@ -27,7 +27,7 @@ function Header(props:any) {
 
 
           <Link to="/basket">
-            <MdAddShoppingCart size={25} className="icon"/>
+            <MdAddShoppingCart size={25} className="icon cursor-p"/>
             <CartCircle quantity={pills.length}/>
             <CartCircle quantity={pills.length}/>
           </Link>

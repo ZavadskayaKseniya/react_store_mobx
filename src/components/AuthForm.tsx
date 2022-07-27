@@ -9,6 +9,7 @@ import {Controller, SubmitHandler, useForm, useFormState} from "react-hook-form"
 
 import {StoresNames} from "@/store/StoresNames";
 import {useNavigate} from "react-router-dom";
+import "@/styles/AuthForm.modules.scss";
 
 
 interface  IAuth {
@@ -37,11 +38,11 @@ function AuthForm(props:any) {
   return (
     <div className="auth-form d-flex  mt-5">
       <Card style={{width: 600}} className="p-5 d-flex justify-content-center align-items-center">
-        <Typography component="div">
+        <Typography component="div" variant="overline">
           Войдите
         </Typography>
-        <Typography variant="subtitle1" color="info"  component="div">
-          Чтобы получит доступ
+        <Typography variant="overline" color="warning"  component="div">
+          Чтобы получить доступ
         </Typography>
         <form className="auth-form__form" onSubmit={handleSubmit(onSubmit)}>
           <Controller
@@ -87,6 +88,7 @@ function AuthForm(props:any) {
             variant="contained"
             disableElevation={true}
             fullWidth={true}
+            color="error"
             sx={{
               marginTop:2
             }}
