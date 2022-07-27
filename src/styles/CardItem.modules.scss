@@ -1,7 +1,13 @@
 .card-item {
   margin-right: 20px;
   margin-bottom:20px;
+  box-sizing: border-box;
 
+}
+.btn-add {
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
 .card-item:hover {

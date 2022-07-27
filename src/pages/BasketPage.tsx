@@ -15,34 +15,34 @@ function BasketPage(props:any) {
 
   return (
     <div className="basket-page">
-      {
-        pillsInCart.map((pill: interfacePill) =>
-          <div className="card-item" >
-            <Card sx={{ width: 280 , height:190, minHeight: 190}}>
 
-              <CardContent >
-                <Typography gutterBottom variant="h5" component="div">
-                  {pill.substance.name}
-                </Typography>
-                <br/>
-                <Typography variant="body2" color="text.secondary">
-                  {pill.name}
-                </Typography>
-              </CardContent>
+      <div className="left-content">
+        <Typography variant="h3" color="black" sx={{marginBottom:3}}>Корзина</Typography>
+        {
 
-            </Card>
-          </div>
-        )
+          pillsInCart.map((pill: interfacePill) =>
+            <div className="card-item" >
+              <Card sx={{ width: 280 , height:190, minHeight: 190}}>
+                <CardContent >
+                  <Typography gutterBottom variant="h5" component="div">
+                    {pill.substance.name}
+                  </Typography>
+                  <br/>
+                  <Typography variant="body2" color="text.secondary">
+                    {pill.name}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </div>
+          )
       }
-      {
-        pillsInCart>0 ?
-          <div>
-            <Button color="secondary">Оформить</Button>
-          </div>
-          :
-          <div>Корзина пуста</div>
+      </div>
+      <div className="right-content">
+        <Button className="button-buy">Оформить</Button>
 
-      }
+      </div>
+
+
     </div>
   );
 }
