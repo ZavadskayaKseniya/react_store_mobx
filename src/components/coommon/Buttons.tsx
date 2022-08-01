@@ -8,9 +8,9 @@ import React from 'react';
 
 function Buttons(props:any) {
   return (
-    <div className="button">
+    <div className="button" >
 
-      <Button variant="contained" color="error" onClick={props.onClick}>В корзину</Button>
+      <Button variant="contained" sx={{position:"absolute",right:20, top:10}} color="error"  onClick={props.onClick}>В корзину</Button>
 
     </div>
   );

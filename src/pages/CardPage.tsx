@@ -1,27 +1,27 @@
 import "@/styles/CardPage.modules.scss";
 
+import InterfacePill from "@models/interfacePill";
 import { Typography } from '@mui/material';
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import {inject} from "mobx-react";
 import {observer} from "mobx-react-lite";
 import React from 'react';
-import {useParams} from "react-router-dom";
 
-import Buttons from "@/components/coommon/Buttons";
-import {StoresNames} from "@/store/StoresNames";
 import CardItem from "@/components/CardItem";
+import {StoresNames} from "@/store/StoresNames";
 
 
-class interfacePill {
-}
 
-const CardPage = (props:any) => {
-  const cardStore = props.CardStore;
-  const {id} = useParams();
 
-  const pill = cardStore.getPillById(Number(id));
+
+function CardPage(props:any) {
+ 
+  
+
+  const pillsCards = props.CardStore.pills.map((pill:InterfacePill) =>
+    <CardItem key={pill.id} pills={pill} onClick={() => console.log("doijc")}/>
+  );
 
 
 
@@ -34,11 +34,11 @@ const CardPage = (props:any) => {
 
         <CardContent >
           <Typography gutterBottom variant="h5" component="div">
-            {pill.substance.name}
+            {pillsCards.substance.name}
           </Typography>
           <br/>
           <Typography variant="body2" color="text.secondary">
-            {pill.name}
+            {pillsCards.name}
           </Typography>
         </CardContent>
 
@@ -46,6 +46,6 @@ const CardPage = (props:any) => {
 
     </div>
   );
-};
+}
 
 export default inject(StoresNames.CardStore)(observer(CardPage));

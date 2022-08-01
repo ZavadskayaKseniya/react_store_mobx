@@ -6,7 +6,7 @@ const CartCircle = ({
   quantity=0
 }) => {
   return (quantity > 0 )?(
-    <div className="cart-circle">
+    <div className="cart-circle cursor-p">
       {quantity}
     </div>
   ): null;

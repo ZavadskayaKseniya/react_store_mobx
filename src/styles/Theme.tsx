@@ -8,6 +8,9 @@ const theme = createTheme({
       main:"#0c27af"},
     error: {
       main:"#c00202"},
+    warning : {
+      main: "#656464"
+    }
 
   },
   typography: {
